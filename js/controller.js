@@ -10,7 +10,7 @@ function phonelistCtrl($scope, $http) {
 
 
 
-    $http.get('http://172.20.1.36/Service1.svc/getallempl').success(function(data, status, headers){
+    $http.get('bd/getallempl.json').success(function(data, status, headers){
       $scope.listempl = data;
         
         $scope.pageChangeHandler = function(num) {
