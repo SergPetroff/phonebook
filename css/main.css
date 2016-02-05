@@ -1,3 +1,64 @@
+.maincontent{
+	/*background: url('../img/Agatbckgrnd.jpg');*/
+}
+.content-wrap{
+	margin: 0 auto;
+	width: 80%;
+}
+
+
 .search{
 	margin: 50px 0;
+}
+
+.form-control{
+	font-size: 20px;
+	height: 40px;
+}
+
+.input-group-addon{
+	font-size: 18px;
+}
+
+.fio{
+	min-width: 250px;
+}
+.position{
+	min-width: 350px;	
+}
+
+
+.email{
+	min-width: 150px;
+}
+.emil .emeil-ext .emeil-ext__data{ 
+	margin-left: 5px;
+}
+
+
+
+.state{
+	min-width: 150px;		
+}
+
+.phone-ext{
+	min-width: 120px;			
+}
+
+.header{
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+
+.header__wraplogo{
+	margin: 0 auto;
+	width: 50%;
+}
+
+.logoagat{
+	width: 100%;
+}
+
+.room-data{
+	/*font-weight: 600;*/
 }

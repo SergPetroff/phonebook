@@ -1,24 +1,23 @@
 'use strict';
 
-var phoneBook = angular.module('phoneBook',['angularUtils.directives.dirPagination']); // Создаем модуль
+var myApp = angular.module('phoneBook', ['angularUtils.directives.dirPagination']);
 
-phoneBook.controller('phonelistCtrl',function($scope, $http){
-	$scope.list = $scope.$parent.personList
-	$scope.config = {
-    itemsPerPage: 5,
-    fillLastPage: true
-  }
-
-
+function phonelistCtrl($scope, $http) {
 	$scope.title = "Телефонный справочник";
-		/*------  JSON ------*/
+  $scope.currentPage = 1;
+  $scope.pageSize = 20;
+  $scope.listempl = [];
 
-		$http.get('bd/getallempl.json').success(function(data, status, headers){
-			//console.log('data:',data,);
-			//console.log('Департамент:',Department, '\n\n ФИО:',FIO,'\n\n Телефон:',Phone_internal)
-			//console.log('data:',data, '\n\n Status:',status,'\n\n Headers:',headers)
-			$scope.listempl = data;
-		});
 
-		$scope.sortField = "FIO";
-});
+
+    $http.get('http://172.20.1.36/Service1.svc/getallempl').success(function(data, status, headers){
+      $scope.listempl = data;
+        
+        $scope.pageChangeHandler = function(num) {
+            //console.log('meals page changed to ' + num);
+        };
+
+    });
+}
+
+myApp.controller('phonelistCtrl', phonelistCtrl);
