@@ -4,14 +4,18 @@
     "FIO": "Иванов Сергей Федорович",
     "Phone_internal": "12-34",
     "Position": "Самый главный",
-    "State": "На территории"
+    "State": "На территории",
+    "Email_int": "ivanov@agat.local",
+    "Email_ext": ""
   },
     {
     "Department": "Финансовый",
     "FIO": "Федорова Татьяна Ивановна",
     "Phone_internal": "45-67",
     "Position": "Заместитель главного",
-    "State": "На территории"
+    "State": "На территории",
+    "Email_int": "fedorova@agat.local",
+    "Email_ext": "1234@yandex.ru"
   },
       {
     "Department": "Финансовый",
@@ -33,7 +37,9 @@
     "FIO": "Кузнецов Виктор Иванович",
     "Phone_internal": "33-47",
     "Position": "Системный администратор",
-    "State": "За территорией"
+    "State": "За территорией",
+    "Email_int": "kuz@agat.local",
+    "Email_ext": "1234@yandex.ru"
   },
 
     {

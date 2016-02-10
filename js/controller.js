@@ -23,7 +23,7 @@ function phonelistCtrl($scope, $http) {
     });
 
   // Вывод CSS класса для иконки состояния работника
-  $scope.getClass = function getClass(idx, state, fio) {
+  $scope.getState = function getState(idx, state, fio) {
     //state.indexOf("На территории")
         return {
             emplinside: state.indexOf("На территории") ? 0 : -1,
@@ -31,9 +31,17 @@ function phonelistCtrl($scope, $http) {
             emplholydays: state.indexOf("Отпуск") ? 0 : -1,
             emplworktrip: state.indexOf("Командировка") ? 0 : -1
           };
-        };
+  };
+  $scope.showEmail = function showEmail(idx, email){
+    if(!!email){
+      //console.log(email.indexOf("@"))
+      return{
+        showemail:email.indexOf("@") ? -1 : 0
 
-
+      };
+    }
+      
+  };
 }
 
 myApp.filter('searchFor', function(){
@@ -66,11 +74,13 @@ myApp.controller('phonelistCtrl', phonelistCtrl);
 
 myApp.directive('tooltip', function(){
     return {
-        restrict: 'A',
         link: function(scope, element, attrs){
             $(element).hover(function(){
                 // on mouseenter
-                $(element).tooltip('show').addClass('animated swing');
+                $(element).tooltip('show');
+                $(element).on('shown.bs.tooltip', function () {
+                    $('.tooltip').addClass('animated swing');
+                })
             }, function(){
                 // on mouseleave
                 $(element).tooltip('hide');
@@ -81,15 +91,13 @@ myApp.directive('tooltip', function(){
 
 
 $(document).ready(function(){
-    //$('[data-toggle="tooltip"]').tooltip();
-    //$('.testtlt').tooltip('show') 
-   // $('a').tooltip();
+
    $('[data-toggle=tooltip]').hover(function(){
         // on mouseenter
         $(this).tooltip('show');
     }, function(){
         // on mouseleave
-        $(this).tooltip('hide');
+        //$(this).tooltip('hide');
     });
 
 });

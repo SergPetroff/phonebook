@@ -65,7 +65,7 @@
                     <!--<a href="#" data-toggle="tooltip" title="test" >
                       <i ng-class="getClass($index,empl.State)"></i>
                     </a>-->
-                    <i ng-class="getClass($index,empl.State)"></i>
+                    <i ng-class="getState($index,empl.State)"></i>
                     <!--<a href="#" title="empl.State" data-toggle="tooltip" data-placement="top" tooltip>
                       <i ng-class="getClass($index,empl.State)"></i>
                     </a>-->
@@ -83,12 +83,12 @@
                   </span>
                 </td>
                 <td class = "email">
-                  <span class="email-int">Внутренний:
+                  <span class="email-int" ng-class="showEmail($index,empl.Email_int)">Внутренний:
                     <span class="email-int__data"><a href="mailto:{{empl.Email_int}}">{{empl.Email_int}} </a></span>
                   </span>
 
 
-                  <span class="emeil-ext">Внешний:
+                  <span class="emeil-ext" ng-class="showEmail($index,empl.Email_ext)">Внешний:
                     <span class="emeil-ext__data">{{empl.Email_ext}}</span>
                   </span>
                 </td>

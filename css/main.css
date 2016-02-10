@@ -31,10 +31,19 @@
 .email{
 	min-width: 150px;
 }
-.emil .emeil-ext .emeil-ext__data{ 
+.email .emeil-ext .emeil-ext__data{ 
 	margin-left: 5px;
 }
 
+.email-int{
+	display: none;
+}
+.emeil-ext{
+	display: none;
+}
+.showemail{
+	display: block;
+}
 
 
 .state{
