@@ -11,10 +11,11 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 
+
     <!-- angularjs -->
     <script src="js/angular.min1.4.9.js"></script>
     <script src="js/dirPagination.js"></script>
-    <script src="js/controller.js"></script>
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,24 +27,28 @@
     
   </head>
   <body ng-controller="phonelistCtrl" >
-  <div class="maincontent">
+  <div class="maincontent ">
     <div class="header">
       <div class="header__wraplogo">
         <img class="logoagat" src="img/agatlogo.png">
       </div>
     </div>
     <div class="content-wrap">
+
       <h3>{{title}}</h3>
+  <a href="#" data-toggle="tooltip" title="Test">Large tooltip</a>
+      
       
       <div class="search">
         <div class="input-group">
           <span class="input-group-addon" id="basic-addon3">Поиск</span>
-          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" ng-model="query">
+          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" ng-model="searchString">
         </div>
       </div>
       <div class="content-wrap__viewtb">
         <table class="table table-hover " >
           <thead>
+            <th>
             <th>Подразделение</th>
             <th>ФИО</th>
             <th>Должность</th>
@@ -51,33 +56,43 @@
             <th>Городской телефон</th>
             <th>Местопололжение</th>
             <th>E-mail</th>
-            <th>Статус</th>
+            
           </thead>
-          <tbody>
-            <tr dir-paginate="empl in listempl | filter:query |orderBy:'FIO'| itemsPerPage: pageSize" current-page="currentPage">
-              <td class = "Dep">{{empl.Department}}</td>
-              <td class = "fio">{{empl.FIO}}</td>
-              <td class = "position">{{empl.Position}}</td>
-              <td class = "phone-int">{{empl.Phone_internal}}</td>
-              <td class = "phone-ext">{{empl.Phone_ext}}</td>
-              <td class="place">
-                <span class="build">Корпус: {{empl.build}}</span><br/>
-                <span class="room">Комната:
-                  <span class="room-data">{{empl.Room}}</span>
-                </span>
-              </td>
-              <td class = "email">
-                <span class="email-int">Внутренний:
-                  <span class="email-int__data"><a href="mailto:{{empl.Email_int}}">{{empl.Email_int}}</a></span>
-                </span>
+            <tbody>
+              <tr dir-paginate="empl in listempl | searchFor:searchString |orderBy:'FIO'| itemsPerPage: pageSize" current-page="currentPage">
+                <td>
+                  <div class="wrap-icostate" title={{empl.State}} data-toggle="tooltip" data-placement="left" tooltip>
+                    <!--<a href="#" data-toggle="tooltip" title="test" >
+                      <i ng-class="getClass($index,empl.State)"></i>
+                    </a>-->
+                    <i ng-class="getClass($index,empl.State)"></i>
+                    <!--<a href="#" title="empl.State" data-toggle="tooltip" data-placement="top" tooltip>
+                      <i ng-class="getClass($index,empl.State)"></i>
+                    </a>-->
+                  </div>
+                </td>
+                <td class = "Dep">{{empl.Department}}</td>
+                <td class = "fio">{{empl.FIO}}</td>
+                <td class = "position">{{empl.Position}}</td>
+                <td class = "phone-int">{{empl.Phone_internal}}</td>
+                <td class = "phone-ext">{{empl.Phone_ext}}</td>
+                <td class="place">
+                  <span class="build">Корпус: {{empl.build}}</span><br/>
+                  <span class="room">Комната:
+                    <span class="room-data">{{empl.Room}}</span>
+                  </span>
+                </td>
+                <td class = "email">
+                  <span class="email-int">Внутренний:
+                    <span class="email-int__data"><a href="mailto:{{empl.Email_int}}">{{empl.Email_int}} </a></span>
+                  </span>
 
 
-                <span class="emeil-ext">Внешний:
-                  <span class="emeil-ext__data">{{empl.Email_ext}}</span>
-                </span>
-              </td>
-              <td class = "state">{{empl.State}}</td>
-            </tr>
+                  <span class="emeil-ext">Внешний:
+                    <span class="emeil-ext__data">{{empl.Email_ext}}</span>
+                  </span>
+                </td>
+              </tr>
           </tbody>
         </table>
         <div class="down-pagination">
@@ -93,6 +108,8 @@
     <script src="js/jquery-1.12.0.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/controller.js"></script>
 
 
     
