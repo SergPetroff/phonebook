@@ -1,7 +1,9 @@
 [
   {
     "Department": "Финансовый",
-    "FIO": "Иванов Сергей Федорович",
+    "FirstName": "Иванов",
+    "LastName": " Сергей",
+    "FatherName":"Федорович",
     "Phone_internal": "12-34",
     "Position": "Самый главный",
     "State": "На территории",
@@ -10,7 +12,9 @@
   },
     {
     "Department": "Финансовый",
-    "FIO": "Федорова Татьяна Ивановна",
+    "FirstName": "Козлов",
+    "LastName": " Иван",
+    "FatherName":"Иванович",
     "Phone_internal": "45-67",
     "Position": "Заместитель главного",
     "State": "На территории",
@@ -19,14 +23,18 @@
   },
       {
     "Department": "Финансовый",
-    "FIO": "Сидорова Ольга Леонидовна",
-    "Phone_internal": "33-12",
+    "FirstName": "Сидорова",
+    "LastName": " Татьяна",
+    "FatherName":"Сергеевна",
+    "Phone_internal": "",
     "Position": "Специалист",
     "State": "Командировка по 15.02.2016"
   },
   {
     "Department": "Информационных технологий",
-    "FIO": "Петров Сергей Викторович",
+    "FirstName": "Петров",
+    "LastName": " Сергей",
+    "FatherName":"Викторович",
     "Phone_internal": "22-55",
     "Position": "Директор",
     "State": "Отпуск с 10.02.2016 по 20.02.2016"
@@ -34,8 +42,10 @@
 
     {
     "Department": "Информационных технологий",
-    "FIO": "Кузнецов Виктор Иванович",
-    "Phone_internal": "33-47",
+    "FirstName": "Нагорный",
+    "LastName": " Дмитрий",
+    "FatherName":"Сергеевич",
+    "Phone_internal": "45-47",
     "Position": "Системный администратор",
     "State": "За территорией",
     "Email_int": "kuz@agat.local",
@@ -43,11 +53,177 @@
   },
 
     {
-    "Department": "Информационных технологий",
-    "FIO": "Соловьев Иван Батькович",
+    "Department": "81000-2 Филиал \"Научно-технический центр АО \"Концерн \"Моринсис-Агат\" в г. Санкт-Петербурге",
+    "FirstName": "Соловьев",
+    "LastName": " Иван",
+    "FatherName":"Федорович",
     "Phone_internal": "88-75",
     "Position": "Специалист",
     "State": "Отпуск с 01.01.2016 по 15.01.2016"
+  },
+  {
+    "Department": "Финансовый",
+    "FirstName": "Козлов",
+    "LastName": " Иван",
+    "FatherName":"Иванович",
+    "Phone_internal": "45-67",
+    "Position": "Заместитель главного",
+    "State": "На территории",
+    "Email_int": "fedorova@agat.local",
+    "Email_ext": "1234@yandex.ru"
+  },
+      {
+    "Department": "Финансовый",
+    "FirstName": "Сидорова",
+    "LastName": " Татьяна",
+    "FatherName":"Сергеевна",
+    "Phone_internal": "",
+    "Position": "Специалист",
+    "State": "Командировка по 15.02.2016"
+  },
+  {
+    "Department": "Информационных технологий",
+    "FirstName": "Петров",
+    "LastName": " Сергей",
+    "FatherName":"Викторович",
+    "Phone_internal": "22-55",
+    "Position": "Директор",
+    "State": "Отпуск с 10.02.2016 по 20.02.2016"
+  },
+
+    {
+    "Department": "Информационных технологий",
+    "FirstName": "Нагорный",
+    "LastName": " Дмитрий",
+    "FatherName":"Сергеевич",
+    "Phone_internal": "45-47",
+    "Position": "Системный администратор",
+    "State": "За территорией",
+    "Email_int": "kuz@agat.local",
+    "Email_ext": "1234@yandex.ru"
+  },
+  {
+    "Department": "Финансовый",
+    "FirstName": "Козлов",
+    "LastName": " Иван",
+    "FatherName":"Иванович",
+    "Phone_internal": "45-67",
+    "Position": "Заместитель главного",
+    "State": "На территории",
+    "Email_int": "fedorova@agat.local",
+    "Email_ext": "1234@yandex.ru"
+  },
+      {
+    "Department": "Финансовый",
+    "FirstName": "Сидорова",
+    "LastName": " Татьяна",
+    "FatherName":"Сергеевна",
+    "Phone_internal": "",
+    "Position": "Специалист",
+    "State": "Командировка по 15.02.2016"
+  },
+  {
+    "Department": "Информационных технологий",
+    "FirstName": "Петров",
+    "LastName": " Сергей",
+    "FatherName":"Викторович",
+    "Phone_internal": "22-55",
+    "Position": "Директор",
+    "State": "Отпуск с 10.02.2016 по 20.02.2016"
+  },
+
+    {
+    "Department": "Информационных технологий",
+    "FirstName": "Нагорный",
+    "LastName": " Дмитрий",
+    "FatherName":"Сергеевич",
+    "Phone_internal": "45-47",
+    "Position": "Системный администратор",
+    "State": "За территорией",
+    "Email_int": "kuz@agat.local",
+    "Email_ext": "1234@yandex.ru"
+  },
+  {
+    "Department": "Финансовый",
+    "FirstName": "Козлов",
+    "LastName": " Иван",
+    "FatherName":"Иванович",
+    "Phone_internal": "45-67",
+    "Position": "Заместитель главного",
+    "State": "На территории",
+    "Email_int": "fedorova@agat.local",
+    "Email_ext": "1234@yandex.ru"
+  },
+      {
+    "Department": "Финансовый",
+    "FirstName": "Сидорова",
+    "LastName": " Татьяна",
+    "FatherName":"Сергеевна",
+    "Phone_internal": "",
+    "Position": "Специалист",
+    "State": "Командировка по 15.02.2016"
+  },
+  {
+    "Department": "Информационных технологий",
+    "FirstName": "Петров",
+    "LastName": " Сергей",
+    "FatherName":"Викторович",
+    "Phone_internal": "22-55",
+    "Position": "Директор",
+    "State": "Отпуск с 10.02.2016 по 20.02.2016"
+  },
+
+    {
+    "Department": "Информационных технологий",
+    "FirstName": "Нагорный",
+    "LastName": " Дмитрий",
+    "FatherName":"Сергеевич",
+    "Phone_internal": "45-47",
+    "Position": "Системный администратор",
+    "State": "За территорией",
+    "Email_int": "kuz@agat.local",
+    "Email_ext": "1234@yandex.ru"
+  },
+  {
+    "Department": "Финансовый",
+    "FirstName": "Козлов",
+    "LastName": " Иван",
+    "FatherName":"Иванович",
+    "Phone_internal": "45-67",
+    "Position": "Заместитель главного",
+    "State": "На территории",
+    "Email_int": "fedorova@agat.local",
+    "Email_ext": "1234@yandex.ru"
+  },
+      {
+    "Department": "Финансовый",
+    "FirstName": "Сидорова",
+    "LastName": " Татьяна",
+    "FatherName":"Сергеевна",
+    "Phone_internal": "",
+    "Position": "Специалист",
+    "State": "Командировка по 15.02.2016"
+  },
+  {
+    "Department": "Информационных технологий",
+    "FirstName": "Петров",
+    "LastName": " Сергей",
+    "FatherName":"Викторович",
+    "Phone_internal": "22-55",
+    "Position": "Директор",
+    "State": "Отпуск с 10.02.2016 по 20.02.2016"
+  },
+
+    {
+    "Department": "Информационных технологий",
+    "FirstName": "Нагорный",
+    "LastName": " Дмитрий",
+    "FatherName":"Сергеевич",
+    "Phone_internal": "45-47",
+    "Position": "Системный администратор",
+    "State": "За территорией",
+    "Email_int": "kuz@agat.local",
+    "Email_ext": "1234@yandex.ru"
   }
   
 ]
