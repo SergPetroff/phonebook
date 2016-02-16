@@ -1,4 +1,46 @@
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url('../fonts/opensans-regular-webfont.eot');
+    src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff'),
+         url('../fonts/opensans-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 
+}
+
+.modalcontent__profilelist{
+	list-style: none;
+	padding-left: 5px;
+}
+
+.modalcontent__itemprofile{
+	padding-bottom: 10px;
+}
+
+.modalcontent_value{
+	max-width: 420px;
+	margin-left: 10px;
+	font-size: 17px;
+}
 .modalcontent__title{
 	color: #5e5c5c;
+	vertical-align: top;
+	font-weight: bold;
+	font-size: 17px;
+
 }
+
+.panel{
+	margin-bottom: 0;
+}
+
+.panel-heading__FIO{
+	font-family: 'Open Sans Regular';
+}
+
+.modalcontent{
+	font-family: 'Open Sans Regular';	
+}
+

@@ -1,75 +1,73 @@
 
 <div class="panel panel-info">
-<div class="panel-heading">Карточка сотрудника</div>
+<div class="panel-heading">
+	<h3 class="panel-heading__FIO">{{person.FirstName}} {{person.LastName}} {{person.FatherName}}</h3>
+</div>
   <div class="panel-body">
 
 	  <div class="modalcontent">
-	  		<div class="modalcontent__firstName">
-	  			<div class="modalcontent__title inlnblk">
-	  				<h4>Фамилия И.О.:</h4>
+	  	  <ul class="modalcontent__profilelist">
+		  	<li class="modalcontent__itemprofile">
+		  		<div class="modalcontent__title inlnblk">
+	  				Подразделение:
 	  			</div>
 	  			<div class="modalcontent_value inlnblk">
-	  				<h4>{{person.FirstName}} {{person.LastName}} {{person.FatherName}}</h4>
+	  				{{person.Department}}
 	  			</div>
-	  		</div>
+		  	</li>
+		  	<li class="modalcontent__itemprofile">
+		  		<div class="modalcontent__title inlnblk">
+					Должность:
+	  			</div>
+	  			<div class="modalcontent_value inlnblk">
+	  				{{person.Position}}
+	  			</div>
+		  	</li>
+		  	<li class="modalcontent__itemprofile">
+		  		<div class="modalcontent__title inlnblk">
+	  			Телефон внутренний:
+	  			</div>
+	  			<div class="modalcontent_value inlnblk">
+	  				{{person.Phone_internal}}	
+	  			</div>
+		  	</li>
+		  	<li class="modalcontent__itemprofile">
+		  		<div class="modalcontent__title inlnblk">
+	  			Телефон городской:
+	  			</div>
+	  			<div class="modalcontent_value inlnblk">
+	  				8-495-111-22-33
+	  			</div>
+		  	</li>
+		  	<li class="modalcontent__itemprofile">
+		  		<div class="modalcontent__title inlnblk">
+	  				Местоположение:
+	  			</div>
+	  			<div class="modalcontent_value inlnblk">
+	  				<div class="inlnblk">Корпус:1</div>
+	  				<div class="inlnblk">Комната:211</div>
+	  			</div>
+		  	</li>
+		  	<li class="modalcontent__itemprofile">
+		  		<div class="modalcontent__title inlnblk">
+	  				Email:
+	  			</div>
+	  			<div class="modalcontent_value inlnblk">
+	  				<div class="inlnblk">Внутренний: {{person.Email_int}}</div>
+	  				<div class="inlnblk">Внешний: {{person.Email_ext}}</div>
+	  				
+	  			</div>
+	  		<li class="modalcontent__itemprofile">
+	  			<div class="modalcontent__title inlnblk">
+	  				Статус:
+	  			</div>
+	  			<div class="modalcontent_value inlnblk">
+	  				{{person.State}}
+	  			</div>
+	  		</li>
+		  	</li>
+		  </ul>
 	  		 
-	  		<div class="modalcontent__department">
-	  			<div class="modalcontent__title inlnblk">
-	  				<h4>Подразделение:</h4>
-	  			</div>
-	  			<div class="modalcontent_value inlnblk">
-	  				<h4> {{person.Department}}</h4>	
-	  			</div>
-	  		</div>
-	  		<div class="modalcontent__position">
-	  			<div class="modalcontent__title inlnblk">
-					<h4>Должность:</h4>
-	  			</div>
-	  			<div class="modalcontent_value inlnblk">
-	  				<h4> {{person.Position}}</h4>	
-	  			</div>
-	  		</div>
-	  		<div class="modalcontent__phoneint">
-	  			<div class="modalcontent__title inlnblk">
-	  				<h4>Телефон внутренний</h4>
-	  			</div>
-	  			<div class="modalcontent_value inlnblk">
-	  				<h4> {{person.Phone_internal}}</h4>	
-	  			</div>
-	  		</div>
-	  		<div class="modalcontent__phoneext">
-	  			<div class="modalcontent__title inlnblk">
-	  				<h4>Телефон городской</h4>
-	  			</div>
-	  			<div class="modalcontent_value inlnblk">
-	  				<h4> 8-495-111-22-33</h4>
-	  			</div>
-	  		</div>
-	  		<div class="modalcontent__location">
-	  			<div class="modalcontent__title inlnblk">
-	  				<h4>Местоположение</h4>
-	  			</div>
-	  			<div class="modalcontent_value inlnblk">
-	  				<h4 class="inlnblk">Корпус:1</h4>
-	  				<h4 class="inlnblk">Комната:211</h4>
-	  			</div>
-	  		</div>
-	  		<div class="modalcontent__emailint">
-	  			<div class="modalcontent__title inlnblk">
-	  				<h4>Внутренний email</h4>
-	  			</div>
-	  			<div class="modalcontent_value inlnblk">
-	  				<h4>{{person.Email_int}}</h4>
-	  			</div>
-	  		</div>
-	  		<div class="modalcontent__emailext">
-	  			<div class="modalcontent__title inlnblk">
-	  				<h4>Внешний email</h4>
-	  			</div>
-	  			<div class="modalcontent_value inlnblk">
-	  				<h4>{{person.Email_ext}}</h4>
-	  			</div>
-	  		</div>
 	  </div>
   	
     </div>  

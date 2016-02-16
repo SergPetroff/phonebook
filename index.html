@@ -14,8 +14,8 @@
 
 
     <!-- angularjs -->
-    <!--<script src="js/angular.min.4.9.js"></script>-->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="js/angular.min.4.9.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>-->
     <script src="js/ui-bootstrap-tpls-1.1.2.min.js"></script>
     <script src="js/dirPagination.js"></script>
     
@@ -30,39 +30,54 @@
     
   </head>
   <body ng-controller="phonelistCtrl" >
-  <div class="maincontent ">
-    <div class="header">
-      <div class="header__wraplogo">
-        <img class="logoagat" src="img/agatlogo.png">
-      </div>
-    </div>
-    <div class="content-wrap">
-
-      <h3>{{title}}</h3>
-       
-      
-      <div class="search">
-        <div class="input-group">
-          <span class="input-group-addon" id="basic-addon3">Поиск</span>
-          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" ng-model="searchString" placeholder="Введите текст">
+    <div class="maincontent ">
+      <div class="header">
+        <div class="header__wraplogo">
+          <img class="logoagat" src="img/agatlogo.png">
         </div>
       </div>
+    <div class="content-wrap">
+      <h3 class="myfont">{{title}}</h3>
+        <div class="search">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Поиск</span>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" ng-model="searchString" placeholder="Введите текст">
+          </div>
+        </div>
       <div class="content-wrap__viewtb">
         <table class="table table-hover " >
           <thead>
             <th>
-            <th>Подразделение</th>
-            <th>ФИО</th>
-            <th>Должность</th>
+            <th>
+            <a href="" ng-click="sort('Department')">Подразделение
+              <i class="glyphicon" ng-class="{
+                 'glyphicon-chevron-up':sortUP('Department'),
+                 'glyphicon-chevron-down':sortDown('Department')
+                }"
+              ></i>
+            </a>
+              
+            </th>
+            <th>
+              <a href="" ng-click="sort('FirstName')">ФИО
+                <i class="glyphicon" ng-class="{
+                 'glyphicon-chevron-up':sortUP('FirstName'),
+                 'glyphicon-chevron-down':sortDown('FirstName')
+                }"
+              ></i>
+              </a>
+            </th>
+            <th>
+              <a href="" ng-click="sort('Position')">Должность</a>
+            
+            </th>
             <th>Местный телефон</th>
             <th>Городской телефон</th>
             <th>Местопололжение</th>
             <th>E-mail</th>
-            
-            
           </thead>
             <tbody>
-              <tr dir-paginate="empl in listempl | searchFor:searchString |orderBy:'FirstName'| itemsPerPage: pageSize" current-page="currentPage">
+              <tr dir-paginate="empl in listempl | searchFor:searchString |orderBy:!sortField:reverse| itemsPerPage: pageSize" current-page="currentPage">
                 <td>
                 <div class="wrap-icostate" popover-placement="top" uib-popover={{empl.State}} popover-trigger="mouseenter">
                     <i ng-class="getState($index,empl.State)"></i>
@@ -71,7 +86,7 @@
                 <td class = "Dep">{{empl.Department}}</td>
                 <td class = "Fio">
                   <a href="#" ng-click="modalCard(empl)">
-                  {{empl.FirstName}} {{empl.LastName}} {{empl.FatherName}} 
+                  {{empl.FirstName}} <!--{{empl.LastName}} {{empl.FatherName}} -->
                   </a>
                 <br/>
                 
@@ -100,7 +115,9 @@
           </tbody>
         </table>
 
-        <uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
+        <div class="down-pagination">
+                    <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="js/dirPagination.tpl.html"></dir-pagination-controls>
+        </div>
 
         
   

@@ -7,9 +7,9 @@ function phonelistCtrl($scope, $http, $uibModal) {
 	$scope.title = "Телефонный справочник";
   
 
-  $scope.totalItems = $scope.title.length;
+  
   $scope.currentPage = 1;
-  $scope.pageSize = 10;
+  $scope.pageSize = 15;
   $scope.listempl = [];
   $scope.itemsPerPage = $scope.pageSize;
 
@@ -61,10 +61,32 @@ function phonelistCtrl($scope, $http, $uibModal) {
             }
        });
   };
+
+  // Сортировка
+  $scope.sortField = 'FirstName';
+  $scope.reverse = false;
+
+  $scope.sort = function(fieldName){
+    if($scope.sortField===fieldName){
+      $scope.reverse = !$scope.reverse;
+    } else {
+      $scope.sortField = fieldName;
+      $scope.reverse = false;
+    }
+  }
+
+  $scope.sortUP = function(fieldName){
+      return $scope.sortField === fieldName && !$scope.reverse
+  }
+
+  $scope.sortDown = function(fieldName){
+      return $scope.sortField === fieldName && $scope.reverse
+  }
+
 }
 
 
-
+  // Фильтр
 myApp.filter('searchFor', function(){
     return function(arr, searchString){
         if(!searchString){
